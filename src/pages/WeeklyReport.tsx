@@ -66,7 +66,7 @@ const WeeklyReport = () => {
                 <motion.section variants={itemVariants} className="space-y-4">
                     <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-600 px-2">Critical Vulnerabilities</h2>
                     <div className="space-y-2">
-                        {deceptions.length > 0 ? deceptions.slice(0, 3).map((c, i) => (
+                        {deceptions.length > 0 ? deceptions.slice(0, 3).map((c) => (
                             <div key={c.id} className="p-6 rounded-3xl glass-card flex justify-between items-center group">
                                 <div>
                                     <p className="text-white font-black text-lg tracking-tight group-hover:text-red-400 transition-colors">{c.name}</p>

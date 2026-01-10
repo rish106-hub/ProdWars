@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useApp } from '@/context/AppContext';
-import type { ExamType, Language, UserProfile } from '@/types';
+import type { ExamType, UserProfile } from '@/types';
 
 const OnboardingFlow = () => {
     const navigate = useNavigate();
@@ -39,8 +39,8 @@ const OnboardingFlow = () => {
                                     key={type}
                                     onClick={() => setExamType(type as ExamType)}
                                     className={`h-24 rounded-2xl font-black text-xl transition-all ${examType === type
-                                            ? 'bg-white text-black shadow-xl scale-[1.02]'
-                                            : 'bg-white/5 text-slate-500 border border-white/5'
+                                        ? 'bg-white text-black shadow-xl scale-[1.02]'
+                                        : 'bg-white/5 text-slate-500 border border-white/5'
                                         }`}
                                 >
                                     {type}
@@ -57,8 +57,8 @@ const OnboardingFlow = () => {
                                     key={num}
                                     onClick={() => setAttemptNumber(num)}
                                     className={`h-16 rounded-xl font-black transition-all ${attemptNumber === num
-                                            ? 'bg-white text-black shadow-lg scale-105'
-                                            : 'bg-white/5 text-slate-500 border border-white/5 text-sm'
+                                        ? 'bg-white text-black shadow-lg scale-105'
+                                        : 'bg-white/5 text-slate-500 border border-white/5 text-sm'
                                         }`}
                                 >
                                     {num === 3 ? '3+' : num}
